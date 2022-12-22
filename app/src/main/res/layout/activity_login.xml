@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD"
+    tools:context=".LoginActivity">
+
+<ImageView
+android:id="@+id/iv_circle"
+android:layout_width="200dp"
+android:layout_height="200dp"
+android:layout_marginStart="300dp"
+android:layout_marginTop="-50dp"
+android:src="@drawable/circle"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:tint="#B20000" />
+
+<ImageView
+android:layout_width="300dp"
+android:layout_height="300dp"
+android:layout_marginStart="100dp"
+android:layout_marginTop="-200dp"
+android:src="@drawable/circle"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent" />
+
+<ImageView
+android:layout_width="200dp"
+android:layout_height="200dp"
+android:layout_marginEnd="300dp"
+android:layout_marginBottom="-40dp"
+android:src="@drawable/circle"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:tint="#B20000" />
+
+<ImageView
+android:layout_width="300dp"
+android:layout_height="300dp"
+android:layout_marginBottom="-200dp"
+android:layout_marginEnd="100dp"
+android:src="@drawable/circle"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent" />
+
+<TextView
+android:id="@+id/tv_login"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_marginHorizontal="30dp"
+android:layout_marginTop="10dp"
+android:text="SIGN IN NOW"
+android:textAlignment="center"
+android:textColor="@color/black"
+android:textSize="25sp"
+android:textStyle="bold"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@id/iv_circle">
+</TextView>
+
+<androidx.cardview.widget.CardView
+android:id="@+id/cv_container"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_marginStart="-80dp"
+android:layout_marginTop="40dp"
+android:layout_marginEnd="60dp"
+android:backgroundTint="#FF7A00"
+app:cardCornerRadius="80dp"
+app:cardElevation="8dp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@id/tv_login">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_username"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginVertical="16dp"
+        android:layout_marginStart="110dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_email_24"
+        app:layout_constraintBottom_toTopOf="@id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="48dp"
+        android:background="#FF7A00"
+        android:hint="Email"
+        android:textColorHint="#afafaf"
+        app:layout_constraintBottom_toBottomOf="@id/iv_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_username"
+        app:layout_constraintTop_toTopOf="@id/iv_username"
+        android:fontFamily="@font/poppins"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_password"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginVertical="16dp"
+        android:layout_marginStart="110dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_lock_24"
+        app:layout_constraintBottom_toTopOf="@id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="48dp"
+        android:background="#FF7A00"
+        android:hint="Password"
+        android:textColorHint="#afafaf"
+        app:layout_constraintBottom_toBottomOf="@id/iv_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_password"
+        app:layout_constraintTop_toTopOf="@id/iv_password"
+        android:fontFamily="@font/poppins"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+
+
+<androidx.cardview.widget.CardView
+android:layout_width="70dp"
+android:layout_height="70dp"
+android:backgroundTint="#B20000"
+app:cardCornerRadius="35dp"
+app:cardElevation="24dp"
+app:layout_constraintBottom_toBottomOf="@id/cv_container"
+app:layout_constraintEnd_toEndOf="@id/cv_container"
+app:layout_constraintStart_toEndOf="@id/cv_container"
+app:layout_constraintTop_toTopOf="@id/cv_container">
+
+<ImageButton
+    android:id="@+id/login"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_gravity="center"
+    android:background="#B20000"
+    android:scaleType="fitXY"
+    android:src="@drawable/ic_arrow_right" />
+</androidx.cardview.widget.CardView>
+
+<Button
+android:id="@+id/btn_regist"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:background="@android:color/transparent"
+android:elevation="0dp"
+android:fontFamily="@font/poppins_medium"
+android:text="Belum Punya Akun? Daftar Sekarang!"
+android:textAllCaps="false"
+android:textColor="@android:color/black"
+app:layout_constraintEnd_toEndOf="@id/cv_container"
+app:layout_constraintTop_toBottomOf="@id/cv_container" />
+
+<androidx.cardview.widget.CardView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginStart="-25dp"
+android:layout_marginTop="15dp"
+android:backgroundTint="@color/white"
+app:cardCornerRadius="25dp"
+app:cardElevation="8dp"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@id/btn_regist">
+
+<Button
+    android:id="@+id/bersihkan"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    android:background="@android:color/transparent"
+    android:elevation="0dp"
+    android:paddingStart="50dp"
+    android:paddingEnd="25dp"
+    android:text="CLEAR"
+    android:textAllCaps="false"
+    android:textColor="#ff7a00"
+    android:textStyle="bold"
+    android:fontFamily="@font/poppins_bold"/>
+
+</androidx.cardview.widget.CardView>
+
+<androidx.cardview.widget.CardView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginStart="-25dp"
+android:layout_marginTop="77dp"
+android:backgroundTint="@color/white"
+app:cardCornerRadius="25dp"
+app:cardElevation="8dp"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@id/btn_regist">
+
+<Button
+    android:id="@+id/keluar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    android:background="@android:color/transparent"
+    android:elevation="0dp"
+    android:paddingStart="50dp"
+    android:paddingEnd="25dp"
+    android:text="EXIT"
+    android:textAllCaps="false"
+    android:textColor="#ff7a00"
+    android:textStyle="bold"
+    android:fontFamily="@font/poppins_bold"/>
+</androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
